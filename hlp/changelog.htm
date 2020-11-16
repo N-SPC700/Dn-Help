@@ -1,0 +1,560 @@
+<HTML>
+	<HEAD>
+		<TITLE></TITLE>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+	    <style type="text/css">
+            .changelog
+            {
+	            font-family: verdana;
+	            font-size: 9pt;
+	            line-height: 150%;
+            }
+        </style>        
+	</HEAD>
+	<BODY>
+		<span class="topic">Change log</span><HR />
+        <br />
+
+<!-- Add new changes here -->
+
+<!-- FINALLY, A SMALL UPDATE THAT DOESN'T HURT TO PORT INTO THIS HELP FILE!-->
+	<span class="heading">0CC-Famitracker Version 0.3.14.4</span>
+	<ul class="changelog">
+		<li>Fixed recent file list not updating the registry if cleared without being viewed again at least once</li>
+		<li>Fixed Vxx on blank instruments being overridden by instrument duty sequences</li>
+		<li>Fixed most bugs related to portamento effects on the VRC7 channels in the tracker</li>
+	</ul>
+<br>
+	<ul class="changelog">
+		<li>The following people have contributed to the bug tracker during this revision:
+		<ul class="changelog">
+			<li>Patashu</li>
+			<li>TMM12</li>
+			<li>womo</li>
+		</ul>
+		</li>
+	</ul>
+<!--UPDATE OVER. HOW SAD. NOW I ACTUALLY HAVE TO SUFFER TYPING ALL OF THIS.-->
+	<span class="heading">0CC-Famitracker Version 0.3.14.3</span>
+	<ul class="changelog">
+		<li>Ported the following features from Vanilla Famitracker 0.5.0 beta:</li>
+		<ul class="changelog">
+			<li>Reading 0.5.0 beta FTMs and importing 0.5.0 beta text files</li>
+			<li>5B Hxy/Ixx/Jxx pattern effects (H and J swapped according to 0CC-FT)</li>
+			<li>&& hold instrument command</li>
+			<li>Absolute instrument pitch sequences</li>
+			<li>64-step instrument volume sequences for VRC6 sawtooth</li>
+			<li>Module global tuning</li>
+			<li>Player bookmark (as "row marker")</li>
+		</ul>
+		<li>Ported the following changes from the 0.5.0 beta:</li>
+		<ul class="changelog">
+			<li>Sunsoft 5B code using Blip_Buffer</li>
+			<li>MML Field entry for 5B Noise/mode sequences</li>
+			<li>Removing octave setting in DPCM assignment editor</li>
+			<li>Average BPM display</li>
+			<li>[WIP] Fast volume meter decay rate</li>
+			<li>Saving/Loading themes</li>
+			<li>Reset button in mixer menu</li>
+			<li>Registry entry for frame editor font</li>
+			<li>Movable toolbars</li>
+		</ul>
+		<li>New Tracker Identity</li>
+		<ul class="changelog">
+			<li>Tracker now fully uses "0CC-Famitracker" as application title and uses it's own registry key (loads default values from official FamiTracker)</li>
+			<li>New application icon and document icon</li>
+			<li>New visualizer display</li>
+		</ul>
+		<li>Added support for DPI scaling</li>
+		<li>Selections in the frame editor now have channel scope</li>
+		<li>Added a command to move the current selection to the active editor window</li>
+		<li>"Paste & Duplicate" and drag & drop cloning for the frame editor now reuse common pattern indices within selection</li>
+		<li>Overwrite pasting and range selection commands now work in the frame editor</li>
+		<li>Added a psuedo term "$$" for MML fields which treat all subsequent terms as hexadecimal even without an explicit "$" prefix</li>
+		<li>Fixed arpeggio sequences use note names in the MML field</li>
+		<li>Added buttons to toggle 5B envelope output in the graph editor for 5B noise/mode sequences</li>
+		<li>Redone detune dialog</li>
+		<li>"Strict" is now above "Official" for module error levels</li>
+		<li>Fixed tracker crashing when retrieving the state of a non-existent groove</li>
+		<li>Fixed pattern editor not allowing C-0 in polyphonic note preview</li>
+		<li>Fixed pattern editor not moving to the new frame after dragging a selection outside the current frame</li>
+		<li>Fixed "Left Edge" and "Right Edge" on the pattern editor's horizontal scroll bar</li>
+		<li>Fixed tracker using a parent directory as last used folder after loading multiple instrument files or DPCM samples</li>
+		<li>Fixed N163 instrument wave editor displaying 40 as the wave size if it used a wave size of 4</li>
+		<li>Fixed C-1 and C#1 on the search query's note field matching note release and note cut respectively</li>
+		<li>Fixed search wildcards not working for instrument and volume fields</li>
+		<li>Fixed search results dialog moving the cursor to the incorrect channel for expansion chips</li>
+		<li>Fixed DPCM channel playing note C-0 if it contains an active note after retrieving the channel state</li>
+		<li>Fixed "Recall channel state" command crashing on retrieveing the state of a non-existent groove</li>
+		<li>Fixed instrument recorder not working for the FDS channel</li>
+		<li>Exx effect now works on the Triangle channel</li>
+		<li>Fixed VRC6 sawtooth outputting sound in exported NSFs when the instrunment volume is 0</li>
+		<li>Fixed VRC7 using an incorrect pitch lookup table in exported NSFs</li>
+		<li>Fixed VRC7 not making any sound in exported NSFs after using a note release</li>
+	</ul>
+<br>
+	<ul class="changelog">
+		<li>The following people have contributed to the bug tracker during this revision:
+		<ul class="changelog">
+			<li>MrKyurem</li>
+			<li>Teuthida</li>
+			<li>YobaHere</li>
+		</ul>
+		</li>
+	</ul>
+		
+	<span class="heading">0CC-Famitracker Version 0.3.14.2</span>
+	<ul class="changelog">
+		<li>Added linear pitch mode (originally from Famitracker 0.4.0)
+		<li>Added split keyboard settings dialog</li>
+		<li>Keyboard input now queues notes to different channels of identical type when edit mode is disabled</li>
+		<li>Undoable actions now remember the selectin information immediately before and after performing the action</li>
+		<li>Added "Find All", "Find Previous", and "Replace Previous" commands</li>
+		<li>Added "Selection" as the find/replace scope</li>
+		<li>Changed "Any" effect column scope to "All"</li>
+		<li>"Replace All" and changes to highlight settings are now undoable</li>
+		<li>Register state now uses colours for N163 waveform display</li>
+		<li>Module properties dialog can now insert songs at current position or delete multiple songs</li>
+		<li>Added configuration settings item to check for new versions on startup</li>
+		<li>[WIP] Added module error levels</li>
+		<li>Shortcuts menu now checks for conflicts between shortcut commands</li>
+		<li>Alert prompts for non-undoable commands now select "No" as the default option</li>
+		<li>Added menu command to clear the most recently used file list</li>
+		<li>Added shortcut to select instrument by typing instrument number</li>
+		<li>Fixed tracker sometimes waiting indefinitely while loading a module</li>
+		<li>Fixed file save dialog not displaying .ftm files when saving modified untitled files while loading another document</li>
+		<li>Undoable actions no longer overwrite the redo state information every time they are undone</li>
+		<li>Transposing and scrolling pattern values no longer create a selection under the cursor</li>
+		<li>Fixed Insert and Backspace keys not working properly if an active selection spans across multiple frames or does not begin in the current frame</li>
+		<li>Fixed tracker resetting bookmark positions after moving frame up or down
+		<li>Fixed repeat key inputting invalid notes after using ^0 echo buffer access note</li>
+		<li>Fixed find query not working if note field contains only note name</li>
+		<li>Fixed replacement query not allowing note cut or note release in the note field</li>
+		<li>Fixed find / replace dialog replacing current note if the search query is modified after the previous query matched</li>
+		<li>Fixed performance dialog not displaying after opening once and then closing</li>
+		<li>Fixed tracker not stopping notes from keyboard input if octave is changed while depressing keyboard key</li>
+		<li>Fixed 2A03 channels not using PAL period table when PAL is used</li>
+		<li>Fixed DPCM channel not playing if a VRC6 or 5B instrument is loaded as the current instrument</li>
+		<li>Fixed MMC5 channels not playing sound when switching to another song where the period high byte remains unchanged</li>
+		<li>Fixed VRC6 pulse channels and 5B channels using incorrect period tables for the instrument recorder</li>
+		<li>DPCM data always outputs to same directory as music data instead of tracker root when exporting BIN data and current module contains no DPCM samples</li>
+		<li>Fixed 3xx effect commands causing pitch bends when issued no notes are being played on the channel</li>
+		<li>Fixed 3xx effect commands on VRC7 channels ignoring the current octave register value</li>
+		<li>Fixed N163 loading the waveform of the currently selected instrument if the channel has not used any instrument</li>
+		<li>Fixed VRC7 channels inverting the 4xy vibrato pitch offset in the tracker</li>
+</ul>
+<br>
+	<ul class="changelog">
+		<li>The following people have contributed to the bug tracker during this revision:
+		<ul class="changelog">
+			<li>m9m</li>
+			<li>techel</li>
+			<li>YobaHere</li>
+		</ul>
+		</li>
+	</ul>
+
+
+	<span class="heading">0CC-Famitracker Version 0.3.14.1</span>
+	<ul class="changelog">
+		<li>Tracker no longer validates invalid notes (according to official build)</li>
+		<li>Fixed frame editor not moving the cursor to the clicked channel when clicking on its left/right edges</li>
+		<li>Fixed module properties dialog not moving bookmark lists when moving songs up or down</li>
+		<li>Fixed transpose dialog crashing on selecting "Transpose all tracks"</li>
+		<li>Fixed tracker not updating the vibrato table after loading a new module</li>
+		<li>Changing the module's highlight settings or vibrato style is now recognized as a file changed</li>
+		<li>Fixed DPCM editor not saving changes</li>
+		<li>Fixed VRC7 and 5B not using the refresh rate of the current module</li>
+		<li>Fixed tracker not producing a sound after a WAV file until player begins</li>
+		<li>Fixed WAV render omitting last tick when rendering by a time amount</li>
+		<li>Fixed find dialog not working properly when some ranges are omitted</li>
+		<li>Fixed FDS and MMC5 not producing sound in exported multichip NSFs unless both are enabled</li>
+		<li>Fixed relative instrument arpeggio sequences clipping the channel note at A#7 in exported NSFs</li>
+		<li>Fixed noise channel clipping at 0-# of an octave below in exported NSFs when using download portamentos</li>
+		<li>N163 channels no longer update the wave buffer on every frame</li>
+		<li>Fixed new notes on N163 channels not updating the wave buffer in exported NSFs if instrument does not use a wave instrument sequence</li>
+		
+	</ul>
+<br>
+	<ul class="changelog">
+		<li>The following people have contributed to the bug tracker during this revision:
+		<ul class="changelog">
+			<li>MyKyurem</li>
+			<li>Patashu</li>
+			<li>Threxx</li>
+			<li>YobaHere</li>
+		</ul>
+		</li>
+	</ul>
+
+	<span class="heading">0CC-Famitracker Version 0.3.14.0</span>
+	<ul class="changelog">
+		<li>Added the *.0cc file extension</li>
+		<li>Added diagnostic information when loading invalid modules</li>
+		<li>Added transpose dialog</li>
+		<li>2A03 instruments now implement the instrument interface</li>
+		<li>FDS instruments are now compatible with other channels (as untyped sequence instruments)</li>
+		<li>Multichip NSFs now skip writing to registers of unused sound chips</li>
+		<li>Implemented FDS Zxx in exported NSFs</li>
+		<li>Reordered main frame menu for clearer organization</li>
+		<li>Re-added fine spectrum visualizer</li>
+		<li>Fixed document wrapper for custom exporters crashing when retrieving a non-existent instrument</li>
+		<li>Fixed tracker crashing after importing any FTM containing bookmarks</li>
+		<li>Fixed custom exporters crashing due to incompatible interface layouts</li>
+		<li>Fixed DPCM functions in document wrapper crashing the tracker if the queried sample does not exist</li>
+		<li>Fixed certain multichip exported NSFs crashing due to VRC6 overwriting the driver code in presence of FDS</li>
+		<li>Fixed tracker ignoring "Backup files" option</li>
+		<li>Fixed find / replace dialog not clearing wildcard effect name cache on new searches</li>
+		<li>Selection now always moves to current frame if multi-frame selection is disabled (according to official build)</li>
+		<li>Fixed selection with Shift + arrow keys allowing selection across frame boundaries when option is disabled</li>
+		<li>Fixed selection errors when overflow paste mode is disabled</li>
+		<li>Fixed 2A03 instrument not copying delta offset values on cloning</li>
+		<li>Fixed BPM display showing values above maximum tempo at current refresh rate</li>
+		<li>Fixed VRC6 channels sometimes generating an extra click on starting</li>
+	</ul>
+<!-- all data below is legacy JSR changes, which also includes the rather crusty formatting...-->	
+<hr>
+        <span class="heading">FamiTracker Version 0.4.6</span>
+        <ul class="changelog">
+          <li>&nbsp;Pattern rows with unspecified instruments will use the selected instrument</li>
+          <li>&nbsp;Fixed some rendering bugs</li>
+          <li>&nbsp;Fixed instrument clone command bug</li>
+        </ul>
+
+        <span class="heading">FamiTracker Version 0.4.5</span>
+        <ul class="changelog">
+          <li>&nbsp;Improved VRC7 emulation, clipping will occur when audio is too loud</li>
+          <li>&nbsp;Improved accuracy of tempo calculation</li>
+          <li>&nbsp;Added multi-channel support to the insert command</li>
+          <li>&nbsp;Added song selector to the wave export dialog</li>
+          <li>&nbsp;Added drag and drop support to instrument list for instrument reordering</li>
+          <li>&nbsp;Added hex support to macro sequence strings and waves (x00 and $00)</li>
+          <li>&nbsp;Added option to display channel register values</li>
+          <li>&nbsp;Fixed a bug with the transpose command when used without an active selection</li>
+          <li>&nbsp;Fixed a portamento up/down effect bug when used on a silent channel</li>
+          <li>&nbsp;Fixed a bug with Sxx effect on DPCM affecting the pulse 1 channel when exported to NSF</li>
+          <li>&nbsp;Fixed a bug when using delayed notes on the last row of a pattern</li>
+          <li>&nbsp;Fixed a few pattern editor render bugs</li>
+          <li>&nbsp;Fixed MIDI note on/off priority problem</li>
+        </ul>
+
+        <span class="heading">FamiTracker Version 0.4.4</span>
+        <ul class="changelog">
+          <li>&nbsp;Fixed a problem with fixed arpeggio not playing the final note</li>
+          <li>&nbsp;Fixed muting / unmuting channels affecting all channels when preview full row was enabled</li>
+          <li>&nbsp;Fixed toolbar icons not being visible in Windows XP</li>
+          <li>&nbsp;Fixed a problem that caused the 64th sample not staying assigned when file is loaded</li>
+          <li>&nbsp;Fixed note slides clearing the slide effect after reaching target note</li>
+          <li>&nbsp;Fixed the Select All (Ctrl+A) command behaviour to be more similar to IT</li>
+          <li>&nbsp;Fixed skip command (Dxx) in NSF code when skipping to any other row than 0</li>
+          <li>&nbsp;Fixed NES export</li>
+          <li>&nbsp;Updated PAL DPCM period table</li>
+        </ul>       
+        
+        <span class="heading">FamiTracker Version 0.4.3</span>
+        <ul class="changelog">
+          <li>&nbsp;Added names to the built in VRC7 patches</li>
+          <li>&nbsp;Added option to preview full row when editing notes</li>
+          <li>&nbsp;Added option to display flat notes instead of sharps</li>
+          <li>&nbsp;Added a fix for TNS-HFC carts when DPCM bankswitching is used</li>
+          <li>&nbsp;Added an audio level mixer</li>
+          <li>&nbsp;Removed MIDI import</li>
+          <li>&nbsp;Corrected VRC7 tuning table</li>
+          <li>&nbsp;Fixed DPCM instrument editor keyboard bug</li>
+          <li>&nbsp;Fixed NSF export when using sequences with hidden loop points</li>
+          <li>&nbsp;Fixed NSF code crash when using too many assigned DPCM samples</li>
+          <li>&nbsp;Fixed crash on startup when NSFplay is located in the same folder</li>
+          <li>&nbsp;Fixed a problem with N163 and FDS waves that appeared when playing a module</li>
+          <li>&nbsp;Fixed some DPCM sample editor bugs</li>
+          <li>&nbsp;Fixed duplicated paste bug in the frame editor</li>
+          <li>&nbsp;Fixed some noise pitch slide effect bugs</li>
+          <li>&nbsp;Fixed the tremolo effect command (7xx) on VRC7 channels</li>
+          <li>&nbsp;Fixed note slide effects on VRC7</li>
+        </ul>
+        
+        <span class="heading">FamiTracker Version 0.4.2</span>
+        <ul class="changelog">
+            <li>&nbsp;Added selection + drag & drop capability to the frame editor</li>
+            <li>&nbsp;NSF exporter will optimize N163 waves</li>
+            <li>&nbsp;Added initial delta counter setting to the DPCM instrument editor</li>
+            <li>&nbsp;Added a text exporter / importer (by rainwarrior)</li>
+            <li>&nbsp;Added a shortcut item for the duplicate patterns command</li>
+            <li>&nbsp;Added a volume mask option to pattern editor (edit menu)</li>
+            <li>&nbsp;Added module comments dialog</li>
+            <li>&nbsp;Adjusted filtering of FDS audio emulation</li>
+            <li>&nbsp;Fixed extra effect columns not being copied on shift+drag</li>
+            <li>&nbsp;Fixed a problem with shift+mouse wheel</li>
+            <li>&nbsp;Fixed a few other FTM file import problems</li>
+            <li>&nbsp;Fixed a problem with FDS wave previewing</li>
+            <li>&nbsp;Fixed a bankswitching bug when exporting multisong NSFs</li>
+            <li>&nbsp;Fixed VRC6 and MMC5 not being silenced by the Cxx command</li>
+            <li>&nbsp;Fixed some problems with the Dxx command</li>          
+        </ul>
+                  
+        <span class="heading">FamiTracker Version 0.4.1</span>
+        <ul class="changelog">        
+            <li>&nbsp;Added an instrument files menu</li>
+            <li>&nbsp;Added an option to copy volume column to text (Shift+copy)</li>
+            <li>&nbsp;Changed default key for note cut to '1'</li>
+            <li>&nbsp;Fixed some problems with the FTM import feature</li>
+            <li>&nbsp;Fixed vibrato (4xx) export bug</li>
+            <li>&nbsp;Fixed volume slide (Axx) export bug</li>
+            <li>&nbsp;Fixed an undo bug after pasting from clipboard</li>
+            <li>&nbsp;Fixed problem when loading instrument files that contains sequences of max size</li>
+            <li>&nbsp;Fixed some wave file export bugs</li>
+        </ul>
+                
+        <span class="heading">FamiTracker Version 0.4.0</span>
+        <ul class="changelog">
+            <li>&nbsp;Added fixed and relative arpeggio modes</li>
+            <li>&nbsp;Added DPCM bank switching</li>
+            <li>&nbsp;Added Namco expansion sound</li>
+            <li>&nbsp;Added pattern expand/shrink options</li>
+            <li>&nbsp;Added pattern & instrument deep clone commands (by coda)</li>
+            <li>&nbsp;Added assembly source export option</li>
+            <li>&nbsp;Added some NSF export optimizations</li>
+            <li>&nbsp;Added indication of unsaved files</li>
+            <li>&nbsp;Added support for 24bit and 32bit samples to the DPCM importer</li>
+            <li>&nbsp;Added better DPCM import resampler (by Jarhmander)</li>
+            <li>&nbsp;Added an option to toggle between old & new speed/tempo split-point</li>
+            <li>&nbsp;Moved the home/end key behaviour to the impulse tracker mode</li>
+            <li>&nbsp;Removed PAL option when using expansion chips</li>
+            <li>&nbsp;Increased auto-scroll speed</li>
+            <li>&nbsp;BPM calculation depends on the row highlight settings</li>
+			<li>&nbsp;Added rainwarrior's new VRC7 patches</li>
+            <li>&nbsp;Fixed the file creation date being overwritten when saving files</li>
+            <li>&nbsp;Fixed VRC6 sawtooth pitch bug</li>
+            <li>&nbsp;Fixed VRC6 instrument switch bug</li>
+            <li>&nbsp;Fixed FDS modulation bug (by rainwarrior)</li>
+            <li>&nbsp;Fixed FDS fine pitch setting in the tracker</li>
+            <li>&nbsp;Fixed FDS instrument release behaviour</li>
+            <li>&nbsp;Fixed export problem that occured when trying to play unassigned samples</li>
+            <li>&nbsp;Fixed VRC7 custom instrument bug in exported NSFs</li>
+        </ul>
+            
+        <span class="heading">FamiTracker Version 0.3.7</span>
+        <ul class="changelog">
+             <li>&nbsp;Added MML string copy/paste to VRC7 instrument editor </li>
+             <li>&nbsp;Added VRC7 built-in patch display </li>
+             <li>&nbsp;Added MML string copy/paste to FDS waveform editor </li>
+             <li>&nbsp;Added pattern font size selector </li>
+             <li>&nbsp;Added single instance option </li>
+             <li>&nbsp;Added play option to FTM file type in file explorer </li>
+             <li>&nbsp;Added context sensitive help (F1)</li>
+             <li>&nbsp;Ctrl+select to do whole channel selections</li>
+             <li>&nbsp;New effects:
+                 <ul class="text">
+                     <li>&nbsp;H = FDS modulation depth </li>
+                     <li>&nbsp;I = FDS modulation speed, high part </li>
+                     <li>&nbsp;J = FDS modulation speed, low part </li>
+                 </ul>
+             </li>
+             <li>Shortcuts with removed keys are saved </li>
+             <li>&nbsp;Fixed a crash bug when frame preview is disabled </li>
+             <li>&nbsp;Fixed a sequence editor crash bug </li>
+             <li>&nbsp;Fixed another VRC6 release sequence bug </li>
+             <li>&nbsp;Fixed the PAL flag bug when loading PAL FTMs </li>
+             <li>&nbsp;Fixed a pitch effect (Pxx) bug in exported NSFs </li>
+             <li>&nbsp;Fixed a portamento effect (3xx) bug on noise channel in exported NSFs
+             </li>
+             <li>&nbsp;Fixed MIDI sync clock receiver </li>
+             <li>&nbsp;Fixed a square channels emulation bug </li>
+             <li>&nbsp;Fixed a song editor bug </li>
+             <li>&nbsp;Fixed a problem when saving VRC6 instrument files </li>
+             <li>&nbsp;Fixed a small vibrato export bug</li>                
+        </ul>
+        
+        <span class="heading">FamiTracker Version 0.3.6</span>
+        <ul class="changelog">
+            <li>Added support for module importing</li>
+            <li>Added a shortcut option to show/hide control panel (in settings/shortcuts)</li>
+            <li>Added alt+left/right to move to left/right channel</li>
+            <li>Added block begin/end commands (Alt+B/E, available in IT-mode)</li>
+            <li>Exporter plugin code updated</li>
+            <li>Fixed a problem when loading multiple FTI files with DPCM samples</li>
+            <li>Fixed a problem that occured when using undo on patterns with Dxx/Bxx effects</li>
+            <li>Fixed VRC7 sweeps, auto portamento &amp; fine pitch setting</li>
+            <li>Adjusted VRC7 mixing volume after hardware measurements</li>
+            <li>Changed the VRC7 built-in patch settings to a more accurate set</li>
+            <li>Fixed auto-arpeggio issue in the tracker</li>
+            <li>Fixed the problem that caused release points to sometimes disappear in 
+                saved files</li>
+            <li>Fixed some synchronization issues that could cause a crash when switching 
+                expansion chip sound</li>
+            <li>Fixed some DPCM editor crash bugs</li>
+            <li>Fixed a bug that crashed the program when loading files with FDS 
+                instruments and FDS expansion disabled</li>
+            <li>Fixed a bug that crashed the program when repeatedly pressing F12</li>
+            <li>Fixed Sxx effect in exported files</li>
+            <li>Fixed Rxx effect issue on exported files</li>
+            <li>Fixed Vxx effect inconsistency when exporting NSFs</li>
+            <li>Fixed Qxx/Rxx effect behvaiour on FDS in tracker</li>
+            <li>Fixed Rxx/Qxx effect when triggering a new note before the slide is done 
+                in exported files</li>
+            <li>Fixed a bug in the Yxx-effect when exporting to NSF</li>
+            <li>Corrected the tremolo effect on FDS</li>
+            <li>Inverted the Pxx command in the FDS channel</li>
+            <li>Fixed FDS pitch clipping in exported files</li>
+            <li>Disabled FDS hardware envelope trigger for note 
+                offs when exporting to NSF</li>
+            <li>Fixed a crash bug when inserting/removing frames when max count is used</li>
+            <li>Fixed a crash bug that occurred sometimes when using select-all in a 
+                channel with all effect columns enabled</li>
+            <li>Mixed paste does not overwrite non-empty rows anymore</li>
+            <li>Note cut/release works on IT-mode when previewing notes</li>
+            <li>Fixed a crash bug when inputting MIDI data on an invalid channel</li>
+            <li>Fixed VRC6 sequence bug when triggering the release part</li>
+            <li>Fixed a bug where DPCM would fail in exported NSFs after 
+                removing instruments</li>
+            <li>Fixed a crash bug when using a custom refresh rate with expansion chips</li>
+        </ul>
+        
+        <span class="heading">Version 0.3.5</span>
+        <ul class="changelog">
+            <li>Delete key deleted two rows on the bottom row, fixed</li>
+            <li>Entering an instrument column number moves to that instrument</li>
+            <li>Fixed a bug that caused files with 64 instruments to not load</li>
+            <li>Fixed export bug where instruments with empty sequences caused the 
+                file to not work </li>
+            <li>New effect Sxx, cut note after xx frames </li>
+            <li>New effect Xxx, DPCM retrigger, xx = delay in frames </li>
+            <li>Added a feature to remove unused instruments &amp; 
+                patterns</li>
+            <li>Load/save instrument &amp; DPCM paths bug on Windows Vista &amp; 7 fixed </li>
+            <li>Beeps on Alt+[key] removed </li>
+            <li>Redraws screen on row highlight change </li>
+            <li>Fixed pattern display when frame preview is disabled </li>
+            <li>Fixed the tracker/nsf inconcistency when note delay and speed 
+                change was used on the same row </li>
+            <li>DPCM file preview added </li>
+            <li>CTRL+click in frame editor to queue next 
+                frame when playing </li>
+            <li>Added VRC7 &amp; FDS expansion chips</li>
+            <li>Copy &amp; paste in frame editor. Ctrl+C to copy a row and Ctrl+V to 
+                paste </li>
+            <li>Added note release command. Release-part of sequences are defined 
+                by a &#39;/&#39; in the sequence string. </li>
+            <li>Shortcut editor supports combinations of ctrl+alt+shift </li>
+            <li>Added a new vibrato mode that bends both up and 
+                down, old mode is still available as an option</li>
+            <li>Fixed a bug that caused corruption when using undo after pattern 
+                size change</li>
+            <li>Export plugin support is added</li>
+            <li>New commands in the shortcut editor:
+                <ul class="changelog">
+                    <li>Play song from start (F5)</li>
+                    <li>Play and repeat pattern (F6)</li>
+                    <li>Play from cursor (F7)</li>
+                    <li>Stop (F8)</li>
+                    <li>Move to pattern (F2) / frame editor (F3)</li>
+                    <li>Replace instrument (Alt+S)</li>
+                </ul>
+            </li>
+            <li>Frame (order) window now has an edit mode, double click to activate it. Keys:
+                <ul class="changelog">
+                    <li>0-F: selects a pattern</li>
+                    <li>Ctrl+Up/Down: moves selected frame up/down</li>
+                    <li>Insert/Delete: inserts and deletes frames</li>
+                    <li>Ctrl+C: copy current frame, Ctrl+V: paste frame into selected frame</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <span class="heading">FamiTracker Version 0.3.0</span>
+        <ul class="changelog">
+            <li>MMC5 expansion sound support</li>
+            <li>Improved pattern editor (possible to select multiple channels, drag&#39;n&#39;drop, 
+                control+drag = copy, shift+drag = mix) </li>
+            <li>Ctrl+wheel = Transpose selected notes </li>
+            <li>Shift+wheel = Increase/decrease instrument, volume and effect 
+                values </li>
+            <li>Scroll lock = Toggle follow mode </li>
+            <li>Control+D = Duplicate frame </li>
+            <li>It&#39;s possible to edit directly in the frame editor by double 
+                clicking </li>
+            <li>Customizable keys for note cut, repeat and clear field </li>
+            <li>Added second highlight </li>
+            <li>Added a repeat action key </li>
+            <li>Added a second highlight option </li>
+            <li>Fixed a bug with the tremolo effect</li>
+        </ul>
+        
+        <span class="heading">FamiTracker Version 0.2.9</span>
+        <ul class="changelog">
+            <li>New effects Q, R (pitch slide),
+                A (volume slide)  A (volume slide)</li>
+            <li>Fixed a tempo bug in the tracker</li>
+            <li>VRC6 support added</li>
+            <li>Improved the song editor</li>
+            <li>Added options to disable follow mode
+                when playing and customizable row highlighting</li>
+            <li>Added clear patterns command</li>
+            <li>Wave file 
+                export</li>
+            <li>Added .NES file exporting</li>
+            <li>Improved hardware sweep commands
+                in the tracker again (accurate NSF player is needed to get those right)</li>
+            <li>Fixed a bug where NSFs would
+                fail if there was deleted instruments in the file</li>
+            <li>Fixed a 
+                problem with NSF bankswitching</li>
+            <li>Fixed some problems with note
+                delay command in tracker and NSF</li>
+        </ul>
+        
+        <span class="heading">FamiTracker Version 0.2.7</span>
+		<UL class="changelog">
+			<LI>New NSF code,&nbsp;creates&nbsp;smaller NSF files&nbsp;(and use less 6502&nbsp;CPU).
+			<LI>NSF bank switching is used automatically when needed.
+			<LI>New pattern effects: V, square duty setting/noise mode; Y, DPCM sample offset
+			<LI>Settings edit boxes are locked from editing, double click to unlock.
+			<LI>Fixed some bugs in the instrument editor to avoid crashes.
+			<LI>Added modplug keyboard style when the modplug setting is enabled.
+			<LI>Optimized screen updates,&nbsp;the tracker should use less CPU.
+			<LI>Currently selected instrument&nbsp;is highlighted in the&nbsp;list box.
+			<LI>Added an option to mask the instrument when inserting new&nbsp;notes.
+			<LI>Added a tempo box to the song settings.
+			<LI>Added multiple-tap-of-home-key functionality.
+			<LI>Added an option to&nbsp;select the instrument currently being played by the selected channel.
+			<LI>Fixed mixed pasting, instruments is now also pasted.
+			<LI>Fixed the&nbsp;instrument sequence too long crash bug.
+			<LI>Added buttons for next/prev song in the toolbar.
+			<LI>Auto-arpeggio works for PC keyboard input.
+			<LI>The commands speed, jump, skip and halt are now&nbsp;handled from muted channels.
+			<LI>Notes won't be retriggered&nbsp;when pushing two buttons at the same time and then releasing one.
+			<LI>Added a shortcut editor to the option dialog, note that the default shortcuts will still be shown in menus.
+			<LI>Page up/down jump lenght is customizable from configuration.
+			<LI>Impulse tracker edit option added.
+			<LI>The cursor will move with the same length as step length when moving it.
+			<LI>Fixed a bug that occured when moving the cursor when multiple effect tracks are visible.
+			<LI>Changed the pith sequence interpreter.
+			<LI>Volume of channels will be rounded of to 1 instead of 0.
+			<LI>DPCM delay works in the tracker. </FONT>
+            <li>Fixed a problem that caused 8-bit wave files to fail when imported to DPCM. </font></li>
+            <li>Fixed the crash problem when using samples too long.&nbsp;
+            <li>Added a value gradients option for the volume column.
+            <li>Paste works&nbsp;when edit mode&nbsp;is off.
+			<LI>Changed the noise channel to display frequencies instead of useless notes.
+			<LI>Square hardware sweep is adjusted.
+			<LI>Scrolling with the mouse wheel in free cursor mode will scroll the view and not cursor 
+			<LI>New keys
+		        <UL class="changelog">
+				    <LI>Numpad 0 - 9 = Select instrument 0 - 9</LI>
+					<LI>Ctrl + Numpad = Set step size</LI>
+                    <LI>Alt + F9 = Mute channel</LI>
+                    <LI>Alt + F10 = Solo channel</LI>
+					<LI>Numpad / = Decrease octave</LI>
+					<LI>Numpad * = Increase octave</LI>
+                    <LI>Ctrl + up = Next instrument</LI>
+                    <LI>Ctrl + Down = Previous instrument</LI>
+                    <LI>Alt + T = Mask instrument column</LI>
+                </UL>
+            </LI>
+		</UL>
+		
+		<hr />
+        <span class="footer"><i>Back to <a href="main_index.htm">main index</a></i></span>
+		
+	</BODY>
+</HTML>
